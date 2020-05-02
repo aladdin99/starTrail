@@ -70,10 +70,8 @@ export default {
 
   .img-wrap {
     height: 100vh;
-    width: 100%;
     background: url("../assets/bgm.png") no-repeat;
     padding:0;
-    background-size: 100%;
     background-position: bottom;
     opacity: 0.5;
   }
