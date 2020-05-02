@@ -1,12 +1,12 @@
 <template>
   <div class="starTrail">
+      <audio src="https://m701.music.126.net/20200502214600/3a7fd6d45f7b6964d5f3a9595da7a781/jdymusic/obj/w5zDlMODwrDDiGjCn8Ky/2180586519/98b2/4d51/b6d3/c8c65de6a0bf053a2cd94d1f9473d069.mp3" autoplay></audio>
+      <div class="stars">
+          <div v-for="(item,index) in stars" :key="index" class="star" :style="setStar()"></div>
+      </div>
 
-    <div class="stars">
-      <div v-for="(item,index) in stars" :key="index" class="star" :style="setStar()"></div>
-    </div>
-
-    <!--背景层，不要删除，不然没有作用-->
-    <div class="img-wrap"></div>
+      <!--背景层，不要删除，不然没有作用-->
+      <div class="img-wrap"></div>
   </div>
 </template>
 
@@ -15,8 +15,8 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      stars: 800,//星星的密集程度 递增
-      distance: 1000,//星星的看起来的距离,值越大越远
+      stars: 1200,//星星的密集程度 递增
+      distance: 1400,//星星的看起来的距离,值越大越远
     }
   },
   methods:{
@@ -70,7 +70,9 @@ export default {
 
   .img-wrap {
     height: 100vh;
+    width: 100vw;
     background: url("../assets/bgm.png") no-repeat;
+    background-size: 100%;
     padding:0;
     background-position: bottom;
     opacity: 0.5;

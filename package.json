@@ -13,7 +13,6 @@
     "build": "node build/build.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-
   },
   "dependencies": {
     "vue": "^2.5.2",

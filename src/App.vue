@@ -23,7 +23,7 @@ export default {
 body{
   padding: 0;
   margin: 0;
-  height: 50vh;
+  height: 100vh;
   width: 100vw;
   box-sizing: border-box;
   background: radial-gradient(200% 100% at bottom center, #f7f7b6, #e96f92, #75517d, #1b2947);
