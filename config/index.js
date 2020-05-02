@@ -9,7 +9,7 @@ module.exports = {
 
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: './',
+    assetsPublicPath: './starTrail/dist/',
     proxyTable: {},
 
     // Various Dev Server settings
