@@ -1,7 +1,7 @@
 <template>
   <div class="starTrail">
 
-    <div class="stars" style="border: 1px solid red;">
+    <div class="stars">
       <div v-for="(item,index) in stars" :key="index" class="star" :style="setStar()"></div>
     </div>
 
@@ -26,7 +26,6 @@ export default {
           curR = this.distance + (Math.random() * (-800));
       obj.transformOrigin = "0 0 " + curR + "px";
       obj.transform =  " translate3d(0,0,-" + curR + "px) rotateY(" + (Math.random() * 360) + "deg) rotateX(" + (Math.random() * -50) + "deg) scale(" + s + "," + s + ")";
-      console.log(obj);
       return obj;
     }
   },
