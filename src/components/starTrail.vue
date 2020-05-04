@@ -1,6 +1,9 @@
 <template>
   <div class="starTrail">
-      <audio src="https://m701.music.126.net/20200502214600/3a7fd6d45f7b6964d5f3a9595da7a781/jdymusic/obj/w5zDlMODwrDDiGjCn8Ky/2180586519/98b2/4d51/b6d3/c8c65de6a0bf053a2cd94d1f9473d069.mp3" autoplay></audio>
+      <div class="textDate">
+        <textDate></textDate>
+      </div>
+      <audio src="http://fdfs.xmcdn.com/group55/M01/6A/20/wKgLdV39kpShIdVWABiFZC7Gi3g631.mp3" autoplay></audio>
       <div class="stars">
           <div v-for="(item,index) in stars" :key="index" class="star" :style="setStar()"></div>
       </div>
@@ -11,8 +14,12 @@
 </template>
 
 <script>
+import textDate from "./textDate.vue";
 export default {
   name: 'HelloWorld',
+  components: {
+    textDate,
+  },
   data () {
     return {
       stars: 1200,//星星的密集程度 递增
@@ -31,12 +38,13 @@ export default {
   },
   mounted() {
       this.setStar();
-  }
+  },
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .starTrail{position: relative;}
   @keyframes rotate {
     0% {
       transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(0);
@@ -76,5 +84,9 @@ export default {
     padding:0;
     background-position: bottom;
     opacity: 0.5;
+  }
+
+  .textDate{
+    display: flex;width: 100vw;position: absolute;justify-content: center;align-items: center;
   }
 </style>
