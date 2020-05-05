@@ -1,6 +1,7 @@
 <template>
   <div>
-    <span class="textDate">我们已经成为好友{{dateTime .day}}天{{dateTime .hour}}小时{{dateTime .min}}分钟{{dateTime .sec}}秒啦~</span>
+<!--    <span class="textDate">我们已经成为好友{{dateTime .day}}天{{dateTime .hour}}小时{{dateTime .min}}分钟{{dateTime .sec}}秒啦~</span>-->
+<!--    <span class="textDate">{{dateTime .day}}-{{dateTime.month}}-{{dateTime.date}} {{dateTime .hour}}:{{dateTime .min}}:{{dateTime .sec}}</span>-->
   </div>
 </template>
 
@@ -9,7 +10,7 @@ export default {
   name: 'textDate',
   data () {
     return {
-      dateTime : {day: 0,hour: 0,min: 0,sec: 0}
+      dateTime : {day: 0,hour: 0,min: 0,sec: 0,month: 0,date: 0}
     }
   },
   methods:{
@@ -21,10 +22,17 @@ export default {
         hour = Math.floor((endTime - startTime) / 1000 / 60 / 60),
         day = Math.floor((endTime - startTime) / 1000 / 60 / 60 / 24);
 
-      this.dateTime .day = day;//天数
-      this.dateTime.hour = hour - (day*24);//小时
-      this.dateTime.min = min - (hour*60);//分钟
-      this.dateTime.sec = sec - (min*60);//秒
+      // this.dateTime .day = day;//天数
+      // this.dateTime.hour = hour - (day*24);//小时
+      // this.dateTime.min = min - (hour*60);//分钟
+      // this.dateTime.sec = sec - (min*60);//秒
+
+      this.dateTime.day = new Date().getFullYear();//年份
+      this.dateTime.month = new Date().getMonth() + 1;//月份
+      this.dateTime.date = new Date().getDate();//日期
+      this.dateTime.hour =  new Date().getHours();//小时
+      this.dateTime.min =  new Date().getMinutes();//分钟
+      this.dateTime.sec =  new Date().getSeconds();//秒
     },
     currenTime(){
       setInterval(this.getDate,1000);

@@ -3,6 +3,7 @@
       <div class="textDate">
         <textDate></textDate>
       </div>
+<!--    明天过后-->
       <audio src="http://fdfs.xmcdn.com/group55/M01/6A/20/wKgLdV39kpShIdVWABiFZC7Gi3g631.mp3" autoplay></audio>
       <div class="stars">
           <div v-for="(item,index) in stars" :key="index" class="star" :style="setStar()"></div>
